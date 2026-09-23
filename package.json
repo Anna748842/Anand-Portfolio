@@ -1,0 +1,25 @@
+{
+  "name": "anand-kumar-das-portfolio",
+  "homepage": "https://Anna748842.github.io/Anand-Portfolio",
+  "private": true,
+  "scripts": {
+    "client": "npm --prefix client run dev",
+    "server": "node server/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "mongo-dev": "node ./scripts/start-mongo-and-server.js",
+    "build": "npm --prefix client run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.1",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.0"
+  }
+}
